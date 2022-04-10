@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WarFace</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+
+<body>
+  <div id="lifes" class="lifes">
+    <span><img src="assets/img/heart.png" alt="life"></span>
+    <span><img src="assets/img/heart.png" alt="life"></span>
+    <span><img src="assets/img/heart.png" alt="life"></span>
+    <span id="points">POINTS</span>
+  </div>
+  <div id="player"></div>
+
+  <div class="menu">
+    <div class="text">Choose a player</div>
+    <div class="player_1"><img onclick="chooseSkinOne()" src="assets/img/player_red.PNG" alt="player"></div>
+    <div class="player_2"><img onclick="chooseSkinTwo()" src="assets/img/player_gr.png" alt="player"></div>
+    <div class="start" onclick="start()">START</div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

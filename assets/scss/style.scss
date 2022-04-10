@@ -1,0 +1,166 @@
+@use "../../node_modules/normalize.css/normalize.css";
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: url(../img/background_sky.png);
+  background-size: cover;
+  position: relative;
+  background-position: bottom;
+}
+
+.lifes {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+
+  span {
+    display: block;
+    margin: 10px;
+    float: left;
+
+    img {
+      width: 40px;
+    }
+  }
+}
+
+#player {
+  position: absolute;
+  left: 60px;
+  transition: all 0.5s;
+  top: calc(50% - 100px);
+}
+
+#points {
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.skin_1 {
+  background: url(../img/player_red.PNG);
+  background-size: cover;
+  height: 200px;
+  width: 180px;
+}
+
+.skin_2 {
+  background: url(../img/player_gr.png);
+  background-size: cover;
+  height: 115px;
+  width: 205px;
+}
+
+.enemy {
+  position: absolute;
+  width: 89px;
+  height: 80px;
+  background: url(../img/enemy.gif);
+  background-size: cover;
+  transition: all 3s;
+  left: 100%;
+}
+
+.bullet {
+  width: 30px;
+  height: 10px;
+  background-color: #fefbfe;
+  border-radius: 2px 5px 5px 2px;
+  position: absolute;
+  left: 188px;
+  border-radius: 2px 7px 7px 2px;
+  box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px red, 0 0 15px red,
+    0 0 25px red;
+  transition: all 0.2s;
+}
+
+.boom {
+  background: radial-gradient(
+    circle,
+    rgba(233, 43, 43, 1) 0%,
+    rgba(242, 153, 27, 1) 35%,
+    rgba(251, 164, 40, 1) 57%,
+    rgba(251, 164, 40, 0.08727240896358546) 81%
+  );
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.menu {
+  width: 550px;
+  height: 350px;
+  background-color: rgba($color: #ffffff, $alpha: 0.5);
+  border-radius: 5%;
+  position: absolute;
+  top: calc(50% - 175px);
+  left: calc(50% - 275px);
+  display: grid;
+  grid-template-areas: "tx tx" "p1 p2" "st st";
+  grid-template-columns: repeat(2, 1fr);
+
+  .text {
+    margin-top: 10px;
+    grid-area: tx;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+  }
+
+  .player_1 {
+    grid-area: p1;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: auto;
+      height: 100%;
+      cursor: grabbing;
+    }
+  }
+
+  .player_2 {
+    grid-area: p2;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: auto;
+      height: 55%;
+      cursor: grabbing;
+    }
+  }
+
+  .start {
+    grid-area: st;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+
+.alert {
+  width: 80vw;
+  height: 70vh;
+  background-color: rgba($color: #ffffff, $alpha: 0.5);
+  border-radius: 5%;
+  position: absolute;
+  top: calc(50% - 35vh);
+  left: calc(50% - 40vw);
+  padding: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 29px;
+  text-align: center;
+  flex-wrap: wrap;
+}
